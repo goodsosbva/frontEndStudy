@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    <button>outside form!</button>
+    <form action="/tacos">
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text" placeholder="username" name="name">
+        </p>
+        <p>
+            <label for="password">Enter a Password:</label>
+            <input id="password" type="password" placeholder="password">
+        </p>
+        
+        <!-- 잘안쓰이지만 이런 형식도 가능 -->
+        <p>
+            <label>
+                <input type="color">
+            </label>
+        </p>
+        <input type="number" placeholder="enter a number"></br>
+        <button>submit</button></br>
+    </form>
+
+    <h2>Hijacking Search</h2>
+
+    <h3>redit Search</h3>
+    <!-- https://www.reddit.com/search/?q=dog -->
+    <form action="https://www.reddit.com/search/">
+        <input type="text" name="q">
+        <button>Search reddit</button>
+    </form>
+    
+    <h3>Naver Search</h3>
+    <!-- https://search.naver.com/search.naver?where&query=dog -->
+    <form action="https://search.naver.com/search.naver?where%26">
+        <input type="text" name="query">
+        <button>Search naver</button>
+    </form>
+
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">agree! this!</label>
+
+        <p>
+            <label for="xs">XS: </label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">s: </label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">m: </label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">fish</option>
+                <option value="vegetarian">veget</option>
+                <option value="steak">steak</option>
+            </select>
+        </p>
+            <label for="study">Amount of studing</label>
+            <input type="range" id="study" min="3" max="10" name="study_name">
+        <button>submit</button>
+
+        <h2>Validations Demo</h2>
+        <form action="/dummy">
+            <label for="fisrt">Enter First Name</label>
+            <input type="text" name="first" id="first" required>
+
+            <p>
+                <label for="username">username</label>
+                <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
+            </p>
+            <button>check</button>
+        </form>
+    </form>
+</body>
+</html>
