@@ -1,0 +1,18 @@
+<%- include('partials/head') %>
+
+</head>
+<body>
+    <!-- 부트스트랩 네브바 -->
+    <%- include('partials/navbar') %>s
+    <h1>your random num is: <%= rand %></h1>
+    <% if(rand % 2 === 0){ %>
+    <h2>it is an even number!!</h2>
+    <% } else { %>
+    <h2>it is not an even number!!</h2>
+    <% } %>
+    
+    <h3><%= rand%2 ===0 ? 'even': 'odd' %> </h3>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
